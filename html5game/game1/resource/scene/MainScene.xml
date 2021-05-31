@@ -81,7 +81,7 @@
     <item name="global" value="false" valueDataType="boolean"/>
     <item name="visible" value="true" valueDataType="boolean"/>
     <item name="x" value="30.91846585726782" valueDataType="number"/>
-    <item name="y" value="237.00612680539646" valueDataType="number"/>
+    <item name="y" value="237.0061268053965" valueDataType="number"/>
     <item name="anchorX" value="0" valueDataType="number"/>
     <item name="anchorY" value="0" valueDataType="number"/>
     <item name="width" value="67.19755903846021" valueDataType="number"/>
@@ -157,8 +157,8 @@
     <item name="uiGuid" value="573" valueDataType="string"/>
     <item name="global" value="false" valueDataType="boolean"/>
     <item name="visible" value="true" valueDataType="boolean"/>
-    <item name="x" value="107.65865434567101" valueDataType="number"/>
-    <item name="y" value="235.96254976959878" valueDataType="number"/>
+    <item name="x" value="107.658654345671" valueDataType="number"/>
+    <item name="y" value="235.9625497695988" valueDataType="number"/>
     <item name="anchorX" value="0" valueDataType="number"/>
     <item name="anchorY" value="0" valueDataType="number"/>
     <item name="width" value="67.19755903846021" valueDataType="number"/>
@@ -278,7 +278,7 @@
     <item name="uiGuid" value="587" valueDataType="string"/>
     <item name="global" value="false" valueDataType="boolean"/>
     <item name="visible" value="false" valueDataType="boolean"/>
-    <item name="x" value="203.99082012323618" valueDataType="number"/>
+    <item name="x" value="203.99082012323615" valueDataType="number"/>
     <item name="y" value="322.74750221126715" valueDataType="number"/>
     <item name="anchorX" value="0.5003964459798641" valueDataType="number"/>
     <item name="anchorY" value="0.4879033716954229" valueDataType="number"/>
