@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Kame Lam Blog</title>
+  
+  
+  <link href="https://kame2lam.github.io/atom.xml" rel="self"/>
+  
+  <link href="https://kame2lam.github.io/"/>
+  <updated>2021-06-02T23:48:45.950Z</updated>
+  <id>https://kame2lam.github.io/</id>
+  
+  <author>
+    <name>Kame Lam</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>OTTO機器人</title>
+    <link href="https://kame2lam.github.io/2020/06/01/otto/"/>
+    <id>https://kame2lam.github.io/2020/06/01/otto/</id>
+    <published>2020-06-01T00:00:00.000Z</published>
+    <updated>2021-06-02T23:48:45.950Z</updated>
+    
+    <content type="html"><![CDATA[<table><thead><tr><th>ESP32</th><th>設備</th></tr></thead><tbody><tr><td>4</td><td>蜂鳴器(+)</td></tr><tr><td>GND</td><td>蜂鳴器(-)</td></tr><tr><td>13</td><td>舵機右下</td></tr><tr><td>15</td><td>舵機右上</td></tr><tr><td>2</td><td>舵機左下</td></tr><tr><td>0</td><td>舵機左上</td></tr><tr><td>16</td><td>超聲波傳感器(Echo)</td></tr><tr><td>17</td><td>超聲波傳感器(Trig)</td></tr></tbody></table><h2 id="蜂鳴器"><a href="#蜂鳴器" class="headerlink" title="蜂鳴器"></a>蜂鳴器</h2><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> otto <span class="keyword">import</span> buzzer</span><br><span class="line">bu=buzzer(<span class="number">4</span>)</span><br><span class="line">bu.tone()</span><br><span class="line">bu.play(<span class="string">&#x27;C D E D E -&#x27;</span>,<span class="number">1000</span>)</span><br></pre></td></tr></table></figure><h2 id="舵機"><a href="#舵機" class="headerlink" title="舵機"></a>舵機</h2><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> otto <span class="keyword">import</span> servo</span><br><span class="line"><span class="keyword">import</span> time</span><br><span class="line">ser13=servo(<span class="number">13</span>)</span><br><span class="line">ser13.write_angle(<span class="number">90</span>)</span><br><span class="line">time.sleep(<span class="number">1</span>)</span><br><span class="line">ser13.write_angle(<span class="number">45</span>)</span><br></pre></td></tr></table></figure>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;ESP32&lt;/th&gt;
+&lt;th&gt;設備&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;&lt;tr&gt;
+&lt;td&gt;4&lt;/td&gt;
+&lt;td&gt;蜂鳴器(+)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;GND&lt;/td&gt;
+&lt;td&gt;蜂鳴器(-)&lt;/td</summary>
+      
+    
+    
+    
+    <category term="microPython" scheme="https://kame2lam.github.io/categories/microPython/"/>
+    
+    
+    <category term="microPython" scheme="https://kame2lam.github.io/tags/microPython/"/>
+    
+  </entry>
+  
+</feed>
