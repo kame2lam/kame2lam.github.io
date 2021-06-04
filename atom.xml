@@ -6,7 +6,7 @@
   <link href="https://kame2lam.github.io/atom.xml" rel="self"/>
   
   <link href="https://kame2lam.github.io/"/>
-  <updated>2021-06-03T03:14:04.316Z</updated>
+  <updated>2021-06-04T00:35:46.972Z</updated>
   <id>https://kame2lam.github.io/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Lakeshore:Game2 見鏠插針</title>
+    <link href="https://kame2lam.github.io/2021/06/03/LakeshoreGame3/"/>
+    <id>https://kame2lam.github.io/2021/06/03/LakeshoreGame3/</id>
+    <published>2021-06-03T12:05:00.000Z</published>
+    <updated>2021-06-04T00:35:46.972Z</updated>
+    
+    <content type="html"><![CDATA[<p>縮圖:<br><img src="img1.png" style="width:200px;" /></p><p>成品: <a href="https://kame2lam.github.io/html5game/game3/launcher/">https://kame2lam.github.io/html5game/game3/launcher/</a></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;縮圖:&lt;br&gt;&lt;img src=&quot;img1.png&quot; style=&quot;width:200px;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;成品: &lt;a href=&quot;https://kame2lam.github.io/html5game/game3/launcher/&quot;&gt;https://kame</summary>
+      
+    
+    
+    
+    <category term="Lakeshore" scheme="https://kame2lam.github.io/categories/Lakeshore/"/>
+    
+    
+    <category term="Lakeshore" scheme="https://kame2lam.github.io/tags/Lakeshore/"/>
+    
+    <category term="javascropt" scheme="https://kame2lam.github.io/tags/javascropt/"/>
+    
+  </entry>
   
   <entry>
     <title>Lakeshore:Game2 切西瓜</title>
