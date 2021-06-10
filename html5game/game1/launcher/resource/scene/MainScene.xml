@@ -21,7 +21,7 @@
     <item name="layer" value="0" valueDataType="number"/>
     <item name="behaviors">
       <item type="behavior" behaviorType="BulletBehaivor" name="子弹">
-        <item valueDataType="number" value="400" name="speed"/>
+        <item valueDataType="number" value="0" name="speed"/>
         <item valueDataType="number" value="0" name="acceleration"/>
         <item valueDataType="number" value="0" name="gravity"/>
         <item valueDataType="number" value="-90" name="angle"/>

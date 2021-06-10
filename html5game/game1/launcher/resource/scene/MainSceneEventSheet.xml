@@ -42,7 +42,7 @@
   </item>
   <item type="instance" UID="96">
     <item type="behavior" behaviorType="BulletBehaivor" name="子弹">
-      <item valueDataType="number" value="400" name="speed"/>
+      <item valueDataType="number" value="0" name="speed"/>
       <item valueDataType="number" value="0" name="acceleration"/>
       <item valueDataType="number" value="0" name="gravity"/>
       <item valueDataType="number" value="-90" name="angle"/>
@@ -62,6 +62,9 @@
     <item type="action" persistent="false" callTarget="instance" callName="setValue" target="System">
       <item valueDataType="string" value="score" name="10" variable="true"/>
       <item valueDataType="any" value="0" name="9"/>
+    </item>
+    <item type="action" persistent="false" callTarget="instance" callName="setSpeed" target="AISprite95" behaviorName="子弹">
+      <item valueDataType="number" value="400" name="1"/>
     </item>
   </item>
   <item type="event" conditionRelationShip="true" triggerOnceWhileTrue="false">

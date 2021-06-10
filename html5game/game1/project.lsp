@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project name="game1" version="2.2" showFps="0" openLog="1" fps="60" scaleMode="0" orientaion="0" renderMode="1" bgColor="0" stagewidth="414" stageheight="736" startscenename="newScene1">
   <objects>
-    <type uiname="WebStorage" uitype="AIWebStorage"/>
-    <type uiname="Browser" uitype="AIBrowser"/>
-    <type uiname="Keyboard" uitype="AIKeyboard"/>
+    <type uiname="System" uitype="AISystem"/>
     <type uiname="Function" uitype="AIFunction"/>
+    <type uiname="Browser" uitype="AIBrowser"/>
+    <type uiname="Touch" uitype="AITouch"/>
     <type uiname="Global" uitype="Global"/>
     <type uiname="WebSocket" uitype="AIWebSocket"/>
     <type uiname="Ajax" uitype="AIAjax"/>
-    <type uiname="System" uitype="AISystem"/>
-    <type uiname="Touch" uitype="AITouch"/>
+    <type uiname="Keyboard" uitype="AIKeyboard"/>
+    <type uiname="WebStorage" uitype="AIWebStorage"/>
     <type uiname="MainScene" uitype="Scene"/>
     <type uiname="Layer89" uitype="Layer"/>
     <type uiname="AISprite95" uitype="AISprite"/>
@@ -63,6 +63,13 @@
               </p>
               <p key="9" value="0" valuetype="any">
                 <description>%E6%8C%87%E5%AE%9A%E5%85%A8%E5%B1%80%E5%8F%98%E9%87%8F%E7%9A%84%E5%80%BC%E3%80%82</description>
+              </p>
+            </properties>
+          </action>
+          <action type="setSpeed" targetuiname="AISprite95" targetuitype="AISprite" isConflict="false" behaviorname="子弹" behavior="BulletBehaivor" enabled="true">
+            <properties>
+              <p key="1" value="400" valuetype="number">
+                <description>%E8%AE%BE%E7%BD%AE%E5%AD%90%E5%BC%B9%E8%BF%90%E8%A1%8C%E9%80%9F%E5%BA%A6%E3%80%82</description>
               </p>
             </properties>
           </action>
@@ -379,7 +386,7 @@
                 <p key="collision" value="false" valuetype="boolean">
                   <description>%E5%BD%93%E5%89%8D%E5%AE%9E%E4%BE%8B%E6%98%AF%E5%90%A6%E5%8F%AF%E4%BB%A5%E5%8F%82%E4%B8%8E%E7%A2%B0%E6%92%9E%E6%A3%80%E6%B5%8B</description>
                 </p>
-                <p key="collisionData" value="%22%22" valuetype="string">
+                <p key="collisionData" value="%5Bobject%20_214%5D" valuetype="string">
                   <description>%E5%8F%82%E4%B8%8E%E7%A2%B0%E6%92%9E%E6%97%B6%E7%9A%84%E7%A2%B0%E6%92%9E%E6%95%B0%E6%8D%AE</description>
                 </p>
               </properties>
@@ -1299,7 +1306,7 @@
               <behaviors>
                 <b name="子弹" type="BulletBehaivor">
                   <properties>
-                    <p key="speed" value="400" valuetype="number">
+                    <p key="speed" value="0" valuetype="number">
                       <description>%E8%AE%BE%E7%BD%AE%E5%AD%90%E5%BC%B9%E7%9A%84%E8%BF%90%E5%8A%A8%E9%80%9F%E5%BA%A6%E3%80%82%EF%BC%88%E5%8D%95%E4%BD%8D%EF%BC%9A%E5%83%8F%E7%B4%A0%2F%E7%A7%92%EF%BC%89</description>
                     </p>
                     <p key="acceleration" value="0" valuetype="number">
@@ -1487,7 +1494,7 @@
                 <p key="collision" value="false" valuetype="boolean">
                   <description>%E5%BD%93%E5%89%8D%E5%AE%9E%E4%BE%8B%E6%98%AF%E5%90%A6%E5%8F%AF%E4%BB%A5%E5%8F%82%E4%B8%8E%E7%A2%B0%E6%92%9E%E6%A3%80%E6%B5%8B</description>
                 </p>
-                <p key="collisionData" value="%22%22" valuetype="string">
+                <p key="collisionData" value="%5Bobject%20_214%5D" valuetype="string">
                   <description>%E5%8F%82%E4%B8%8E%E7%A2%B0%E6%92%9E%E6%97%B6%E7%9A%84%E7%A2%B0%E6%92%9E%E6%95%B0%E6%8D%AE</description>
                 </p>
               </properties>
