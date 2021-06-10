@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<eventSheets layout="newScene2" previous="" next="" version="2.2">
+  <item type="instance" UID="611"/>
+  <item type="instance" UID="608"/>
+  <item type="instance" UID="605"/>
+  <item type="variable" variableName="ballNum" variableType="number" initValue="0"/>
+  <item type="variable" variableName="score" variableType="number" initValue="0"/>
+  <item type="event" conditionRelationShip="true" triggerOnceWhileTrue="false">
+    <item type="condition" callTarget="instance" paramsClass="OnButtonBeginEvent" callName="onButtonBegin" isTrigger="true" target="AISprite607"/>
+    <item type="action" persistent="false" callTarget="instance" callName="gotoScene" target="System">
+      <item valueDataType="string" value="%22MainScene%22" name="18"/>
+    </item>
+  </item>
+  <item type="event" conditionRelationShip="true" triggerOnceWhileTrue="false">
+    <item type="condition" callTarget="instance" paramsClass="OnSceneInitCompleteEvent" callName="onSceneInitComplete" isTrigger="true" target="System"/>
+    <item type="action" persistent="false" callTarget="instance" callName="setText" target="score">
+      <item valueDataType="string" value="%22%E5%BE%97%E5%88%86%3A%22%2BSystem.score" name="1"/>
+    </item>
+  </item>
+</eventSheets>

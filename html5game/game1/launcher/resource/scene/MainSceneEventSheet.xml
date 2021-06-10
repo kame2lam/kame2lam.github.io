@@ -51,7 +51,19 @@
     </item>
     <item type="behavior" behaviorType="SolidBehaivor" name="刚体"/>
   </item>
-  <item type="variable" variableName="ballNum" variableType="number" initValue="5"/>
+  <item type="variable" variableName="ballNum" variableType="number" initValue="0"/>
+  <item type="variable" variableName="score" variableType="number" initValue="0"/>
+  <item type="event" conditionRelationShip="true" triggerOnceWhileTrue="false">
+    <item type="condition" callTarget="instance" paramsClass="OnSceneInitCompleteEvent" callName="onSceneInitComplete" isTrigger="true" target="System"/>
+    <item type="action" persistent="false" callTarget="instance" callName="setValue" target="System">
+      <item valueDataType="string" value="ballNum" name="10" variable="true"/>
+      <item valueDataType="any" value="5" name="9"/>
+    </item>
+    <item type="action" persistent="false" callTarget="instance" callName="setValue" target="System">
+      <item valueDataType="string" value="score" name="10" variable="true"/>
+      <item valueDataType="any" value="0" name="9"/>
+    </item>
+  </item>
   <item type="event" conditionRelationShip="true" triggerOnceWhileTrue="false">
     <item type="condition" callTarget="instance" paramsClass="OnCollisionWithOtherObjectEvent" callName="onCollisionWithOtherObject" isTrigger="true" target="AISprite95">
       <item valueDataType="string" value="AISprite548" name="object" isFamily="false"/>
@@ -61,6 +73,10 @@
       <item valueDataType="string" value="ballNum" name="12" variable="true"/>
       <item valueDataType="number" value="1" name="11"/>
     </item>
+    <item type="action" persistent="false" callTarget="instance" callName="addTo" target="System">
+      <item valueDataType="string" value="score" name="14" variable="true"/>
+      <item valueDataType="number" value="1" name="13"/>
+    </item>
   </item>
   <item type="event" conditionRelationShip="true" triggerOnceWhileTrue="false">
     <item type="condition" callTarget="instance" paramsClass="CompareYPosEvent" callName="compareY" isTrigger="false" target="AISprite95">
@@ -68,11 +84,7 @@
       <item valueDataType="number" value="736" name="y"/>
     </item>
     <item type="action" persistent="false" callTarget="instance" callName="gotoScene" target="System">
-      <item valueDataType="string" value="%22MainScene%22" name="18"/>
-    </item>
-    <item type="action" persistent="false" callTarget="instance" callName="setValue" target="System">
-      <item valueDataType="string" value="ballNum" name="10" variable="true"/>
-      <item valueDataType="any" value="5" name="9"/>
+      <item valueDataType="string" value="%22newScene2%22" name="18"/>
     </item>
   </item>
   <item type="event" conditionRelationShip="true" triggerOnceWhileTrue="false">
@@ -81,11 +93,8 @@
       <item valueDataType="string" value="%22lessOrEqual%22" name="operationType"/>
       <item valueDataType="any" value="0" name="value"/>
     </item>
-    <item type="action" persistent="false" callTarget="instance" callName="setVisible" target="AITextField586">
-      <item valueDataType="number" value="1" name="10"/>
-    </item>
-    <item type="action" persistent="false" callTarget="instance" callName="setSpeed" target="AISprite95" behaviorName="子弹">
-      <item valueDataType="number" value="0" name="1"/>
+    <item type="action" persistent="false" callTarget="instance" callName="gotoScene" target="System">
+      <item valueDataType="string" value="%22newScene2%22" name="18"/>
     </item>
   </item>
 </eventSheets>

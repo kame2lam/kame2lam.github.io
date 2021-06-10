@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<eventSheets layout="newScene1" previous="" next="" version="2.2">
+  <item type="instance" UID="599"/>
+  <item type="instance" UID="596"/>
+  <item type="instance" UID="593"/>
+  <item type="variable" variableName="ballNum" variableType="number" initValue="0"/>
+  <item type="variable" variableName="score" variableType="number" initValue="0"/>
+  <item type="event" conditionRelationShip="true" triggerOnceWhileTrue="false">
+    <item type="condition" callTarget="instance" paramsClass="OnButtonBeginEvent" callName="onButtonBegin" isTrigger="true" target="AISprite595"/>
+    <item type="action" persistent="false" callTarget="instance" callName="gotoScene" target="System">
+      <item valueDataType="string" value="%22MainScene%22" name="18"/>
+    </item>
+  </item>
+</eventSheets>

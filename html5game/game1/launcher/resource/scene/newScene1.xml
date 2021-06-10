@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout id="null" sceneSize="414,736" next="MainScene" previous="" eventSheet="newScene1EventSheet" version="2.2">
+  <layer index="0" parallaxX="100" parallaxY="100" layerAlpha="1" layerVisible="true" cacheAsBitmap="false" bgColor="" bgColorAlpha="" layerScaleX="100" layerScaleY="100"/>
+  <item UID="593" plugin="AITextField" name="AITextField592" cacheAsBitmap="false" parallaxX="100" parallaxY="100" index="0" family="text">
+    <item name="name" value="AITextField592" valueDataType="string"/>
+    <item name="uiGuid" value="593" valueDataType="string"/>
+    <item name="global" value="false" valueDataType="boolean"/>
+    <item name="visible" value="true" valueDataType="boolean"/>
+    <item name="x" value="201" valueDataType="number"/>
+    <item name="y" value="200" valueDataType="number"/>
+    <item name="anchorX" value="0.5" valueDataType="number"/>
+    <item name="anchorY" value="0.5" valueDataType="number"/>
+    <item name="width" value="300" valueDataType="number"/>
+    <item name="height" value="50" valueDataType="number"/>
+    <item name="angle" value="0" valueDataType="number"/>
+    <item name="alpha" value="1" valueDataType="number"/>
+    <item name="text" value="%E6%89%93%E7%A3%9A%E9%A0%AD%E9%81%8A%E6%88%B2" valueDataType="string"/>
+    <item name="fontFamily" value="%E6%A8%99%E6%A5%B7%E9%AB%94" valueDataType="string"/>
+    <item name="size" value="50" valueDataType="number"/>
+    <item name="textColor" value="16777215" valueDataType="number"/>
+    <item name="bold" value="false" valueDataType="boolean"/>
+    <item name="enableInput" value="false" valueDataType="boolean"/>
+    <item name="inputType" value="text" valueDataType="string"/>
+    <item name="textAlign" value="center" valueDataType="string"/>
+    <item name="verticalAlign" value="middle" valueDataType="string"/>
+    <item name="maxChars" value="100" valueDataType="number"/>
+    <item name="italic" value="false" valueDataType="boolean"/>
+    <item name="wordWrap" value="false" valueDataType="boolean"/>
+    <item name="enabled" value="true" valueDataType="boolean"/>
+    <item name="collision" value="false" valueDataType="boolean"/>
+    <item name="layer" value="0" valueDataType="number"/>
+  </item>
+  <item UID="596" plugin="AISprite" name="AISprite595" cacheAsBitmap="false" parallaxX="100" parallaxY="100" index="1" family="displayobject">
+    <item name="name" value="AISprite595" valueDataType="string"/>
+    <item name="uiGuid" value="596" valueDataType="string"/>
+    <item name="global" value="false" valueDataType="boolean"/>
+    <item name="visible" value="true" valueDataType="boolean"/>
+    <item name="x" value="202" valueDataType="number"/>
+    <item name="y" value="386" valueDataType="number"/>
+    <item name="anchorX" value="0.5" valueDataType="number"/>
+    <item name="anchorY" value="0.5" valueDataType="number"/>
+    <item name="width" value="252" valueDataType="number"/>
+    <item name="height" value="60" valueDataType="number"/>
+    <item name="angle" value="0" valueDataType="number"/>
+    <item name="alpha" value="1" valueDataType="number"/>
+    <item name="url" value="resource%2FuserAsset%2Fjk9sut.png" valueDataType="string"/>
+    <item name="enabled" value="true" valueDataType="boolean"/>
+    <item name="collision" value="false" valueDataType="boolean"/>
+    <item name="collisionData" value="0%2Fn0.00%7C60.00%2C252.00%7C60.00%2C252.00%7C0.00%2C0.00%7C0.00" sourceValue="0%2Fn0.00%7C60.00%2C252.00%7C60.00%2C252.00%7C0.00%2C0.00%7C0.00" valueDataType="string"/>
+    <item name="layer" value="0" valueDataType="number"/>
+  </item>
+  <item UID="599" plugin="AITextField" name="AITextField598" cacheAsBitmap="false" parallaxX="100" parallaxY="100" index="2" family="text">
+    <item name="name" value="AITextField598" valueDataType="string"/>
+    <item name="uiGuid" value="599" valueDataType="string"/>
+    <item name="global" value="false" valueDataType="boolean"/>
+    <item name="visible" value="true" valueDataType="boolean"/>
+    <item name="x" value="200" valueDataType="number"/>
+    <item name="y" value="384" valueDataType="number"/>
+    <item name="anchorX" value="0.5" valueDataType="number"/>
+    <item name="anchorY" value="0.5" valueDataType="number"/>
+    <item name="width" value="200" valueDataType="number"/>
+    <item name="height" value="50" valueDataType="number"/>
+    <item name="angle" value="0" valueDataType="number"/>
+    <item name="alpha" value="1" valueDataType="number"/>
+    <item name="text" value="%E9%96%8B%E5%A7%8B" valueDataType="string"/>
+    <item name="fontFamily" value="%E5%AE%8B%E4%BD%93" valueDataType="string"/>
+    <item name="size" value="40" valueDataType="number"/>
+    <item name="textColor" value="16777215" valueDataType="number"/>
+    <item name="bold" value="false" valueDataType="boolean"/>
+    <item name="enableInput" value="false" valueDataType="boolean"/>
+    <item name="inputType" value="text" valueDataType="string"/>
+    <item name="textAlign" value="center" valueDataType="string"/>
+    <item name="verticalAlign" value="middle" valueDataType="string"/>
+    <item name="maxChars" value="100" valueDataType="number"/>
+    <item name="italic" value="false" valueDataType="boolean"/>
+    <item name="wordWrap" value="false" valueDataType="boolean"/>
+    <item name="enabled" value="false" valueDataType="boolean"/>
+    <item name="collision" value="false" valueDataType="boolean"/>
+    <item name="layer" value="0" valueDataType="number"/>
+  </item>
+</layout>

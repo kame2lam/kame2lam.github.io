@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<layout id="null" sceneSize="414,736" next="" previous="" eventSheet="MainSceneEventSheet" version="2.2">
+<layout id="null" sceneSize="414,736" next="newScene2" previous="newScene1" eventSheet="MainSceneEventSheet" version="2.2">
   <layer index="0" parallaxX="100" parallaxY="100" layerAlpha="1" layerVisible="true" cacheAsBitmap="false" bgColor="" bgColorAlpha="" layerScaleX="100" layerScaleY="100"/>
   <item UID="96" plugin="AISprite" name="AISprite95" cacheAsBitmap="false" parallaxX="100" parallaxY="100" index="0" family="displayobject">
     <item name="name" value="AISprite95" valueDataType="string"/>
