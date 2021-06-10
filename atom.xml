@@ -6,7 +6,7 @@
   <link href="https://kame2lam.github.io/atom.xml" rel="self"/>
   
   <link href="https://kame2lam.github.io/"/>
-  <updated>2021-06-04T00:35:46.972Z</updated>
+  <updated>2021-06-09T09:22:10.005Z</updated>
   <id>https://kame2lam.github.io/</id>
   
   <author>
@@ -17,11 +17,11 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>Lakeshore:Game2 見鏠插針</title>
+    <title>Lakeshore:Game3 見鏠插針</title>
     <link href="https://kame2lam.github.io/2021/06/03/LakeshoreGame3/"/>
     <id>https://kame2lam.github.io/2021/06/03/LakeshoreGame3/</id>
     <published>2021-06-03T12:05:00.000Z</published>
-    <updated>2021-06-04T00:35:46.972Z</updated>
+    <updated>2021-06-09T09:22:10.005Z</updated>
     
     <content type="html"><![CDATA[<p>縮圖:<br><img src="img1.png" style="width:200px;" /></p><p>成品: <a href="https://kame2lam.github.io/html5game/game3/launcher/">https://kame2lam.github.io/html5game/game3/launcher/</a></p>]]></content>
     
@@ -75,15 +75,16 @@
     <link href="https://kame2lam.github.io/2021/06/01/LakeshoreGame1/"/>
     <id>https://kame2lam.github.io/2021/06/01/LakeshoreGame1/</id>
     <published>2021-06-01T12:00:00.000Z</published>
-    <updated>2021-06-03T03:14:31.951Z</updated>
+    <updated>2021-06-10T00:27:51.267Z</updated>
     
-    <content type="html"><![CDATA[<p>縮圖:<br><img src="img1.png" style="width:200px;" /></p><p>成品: <a href="https://kame2lam.github.io/html5game/game1/launcher/">https://kame2lam.github.io/html5game/game1/launcher/</a></p>]]></content>
+    <content type="html"><![CDATA[<h3 id="縮圖"><a href="#縮圖" class="headerlink" title="縮圖:"></a>縮圖:</h3><img src="img1.png" style="width:200px;" /><h3 id="成品"><a href="#成品" class="headerlink" title="成品:"></a>成品:</h3><p><a href="https://kame2lam.github.io/html5game/game1/launcher/">https://kame2lam.github.io/html5game/game1/launcher/</a></p><h3 id="教學︰"><a href="#教學︰" class="headerlink" title="教學︰"></a>教學︰</h3><p>軟件:<br>Lakeshore是一款無需編程的免費遊戲創作工具<br><a href="https://docs.egret.com/lakeshore">https://docs.egret.com/lakeshore</a><br><a href="https://drive.google.com/file/d/16iATtOlYYGO4RI2qpCNagfQreFpi3SHm/view?usp=sharing">下載</a> </p><p>教學視頻:<br><a href="https://youtu.be/iTlYHTcKMyY">https://youtu.be/iTlYHTcKMyY</a></p>]]></content>
     
     
       
       
-    <summary type="html">&lt;p&gt;縮圖:&lt;br&gt;&lt;img src=&quot;img1.png&quot; style=&quot;width:200px;&quot; /&gt;&lt;/p&gt;
-&lt;p&gt;成品: &lt;a href=&quot;https://kame2lam.github.io/html5game/game1/launcher/&quot;&gt;https://kame</summary>
+    <summary type="html">&lt;h3 id=&quot;縮圖&quot;&gt;&lt;a href=&quot;#縮圖&quot; class=&quot;headerlink&quot; title=&quot;縮圖:&quot;&gt;&lt;/a&gt;縮圖:&lt;/h3&gt;&lt;img src=&quot;img1.png&quot; style=&quot;width:200px;&quot; /&gt;
+
+&lt;h3 id=&quot;成品&quot;&gt;&lt;a href=&quot;#成品&quot; </summary>
       
     
     
