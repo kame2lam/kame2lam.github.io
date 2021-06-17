@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<eventSheets layout="newScene1" previous="" next="" version="2.2">
+  <item type="instance" UID="2950"/>
+  <item type="instance" UID="2947"/>
+  <item type="instance" UID="2944"/>
+  <item type="instance" UID="2941"/>
+  <item type="variable" variableName="score" variableType="number" initValue="0"/>
+  <item type="variable" variableName="timer" variableType="number" initValue="60"/>
+  <item type="event" conditionRelationShip="true" triggerOnceWhileTrue="false">
+    <item type="condition" callTarget="instance" paramsClass="OnSceneInitCompleteEvent" callName="onSceneInitComplete" isTrigger="true" target="System"/>
+    <item type="action" persistent="false" callTarget="instance" callName="setText" target="endTxt">
+      <item valueDataType="string" value="%22%E5%BE%97%E5%88%86%3A%22%2BSystem.score" name="1"/>
+    </item>
+  </item>
+  <item type="event" conditionRelationShip="true" triggerOnceWhileTrue="false">
+    <item type="condition" callTarget="instance" paramsClass="OnButtonBeginEvent" callName="onButtonBegin" isTrigger="true" target="btn1"/>
+    <item type="action" persistent="false" callTarget="instance" callName="gotoScene" target="System">
+      <item valueDataType="string" value="%22MainScene%22" name="18"/>
+    </item>
+    <item type="action" persistent="false" callTarget="instance" callName="setValue" target="System">
+      <item valueDataType="string" value="timer" name="10" variable="true"/>
+      <item valueDataType="any" value="60" name="9"/>
+    </item>
+    <item type="action" persistent="false" callTarget="instance" callName="setValue" target="System">
+      <item valueDataType="string" value="score" name="10" variable="true"/>
+      <item valueDataType="any" value="0" name="9"/>
+    </item>
+  </item>
+</eventSheets>

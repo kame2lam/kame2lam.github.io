@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<eventSheets layout="MainScene" previous="" next="" version="2.2">
+  <item type="instance" UID="670"/>
+  <item type="instance" UID="667">
+    <item type="behavior" behaviorType="ScrollBehaivor" name="滚屏">
+      <item valueDataType="number" value="1" name="active"/>
+      <item valueDataType="string" value="%22scrollLeft%22" name="scrollDirectionType"/>
+      <item valueDataType="number" value="180" name="speed"/>
+    </item>
+  </item>
+  <item type="instance" UID="664">
+    <item type="behavior" behaviorType="ScrollBehaivor" name="滚屏">
+      <item valueDataType="number" value="1" name="active"/>
+      <item valueDataType="string" value="%22scrollLeft%22" name="scrollDirectionType"/>
+      <item valueDataType="number" value="100" name="speed"/>
+    </item>
+  </item>
+</eventSheets>
