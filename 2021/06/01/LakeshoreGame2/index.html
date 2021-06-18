@@ -272,8 +272,63 @@
 </div>
 <div class="article-content">
     <div id="article" class="content">
-        <p>縮圖:<br><img src="img1.png" style="width:200px;" /></p>
-<p>成品: <a href="https://kame2lam.github.io/html5game/game2/launcher/">https://kame2lam.github.io/html5game/game2/launcher/</a></p>
+        <p><strong>縮圖:</strong><br><img src="img1.png" style="width:200px;" /></p>
+<p><strong>成品:</strong><br><a href="https://kame2lam.github.io/html5game/game2/launcher/">https://kame2lam.github.io/html5game/game2/launcher/</a></p>
+<p><strong>教程:</strong><br><a target="_blank" rel="noopener" href="https://raw.githubusercontent.com/kame2lam/kame2lam.github.io/master/html5game/game2/%E5%88%87%E8%A5%BF%E7%93%9C.pptx">素材載點</a></p>
+<ol>
+<li><p>在場景頂部插入圖片,和輸入文字。</p>
+<img src="img2.png" style="width:200px"></li>
+<li><p>設定左邊的西瓜為”子彈”、”出界銷毀”、”接受點擊”和名稱為”move”。</p>
+<img src="img3.png" style="width:400px"></li>
+<li><p>設定右邊的西瓜為名稱為”stop”。</p>
+<img src="img4.png" style="width:400px"></li>
+<li><p>在事件表內，新建事件-&gt;添加事件-&gt;System-&gt;每X秒-&gt;時間: 1 -&gt; 按確定。</p>
+<img src="img5.png" style="width:400px"></li>
+<li><p>添加動件-&gt;精灵”stop”-&gt;制造-&gt;選擇一個對象”move”-&gt;垂直偏移”100”-&gt; 按確定。</p>
+<img src="img6.png" style="width:400px"></li>
+<li><p>按”預覽運行”得到下圖效果。</p>
+<img src="img7.png" style="width:400px"></li>
+<li><p>修改右邊的西瓜為”子彈”、”與剛體碰撞”、”參與碰撞:是”。</p>
+<img src="img8.png" style="width:400px"></li>
+<li><p>兩個牆都設定為”剛體”。</p>
+<img src="img9.png" style="width:400px"></li>
+<li><p>新建全局變數-&gt;變數名”score”。</p>
+<img src="img10.png" style="width:400px"></li>
+<li><p>在事件表內，新建事件-&gt;添加事件-&gt;精灵”move”-&gt;當按下時。</p>
+<img src="img11.png" style="width:400px"></li>
+<li><p>添加動件-&gt;精灵”move”-&gt;銷毀。</p>
+<img src="img12.png" style="width:400px"></li>
+<li><p>添加動件-&gt;System-&gt;全局變量”加法”-&gt;全局變量選”score”,值”1”-&gt;按確定。</p>
+<img src="img13.png" style="width:400px"></li>
+<li><p>添加動件-&gt;文本-&gt;文本內容-&gt;設置文本內容:”得分”+System.score</p>
+<img src="img14.png" style="width:400px"></li>
+<li><p>新建場景”newScene1”-&gt;新增文字和圖片”重設”</p>
+<img src="img15.png" style="width:400px"></li>
+<li><p>圖片設定”接受點擊”, 文字設定名稱”score”</p>
+<img src="img16.png" style="width:400px"></li>
+<li><p>在MainScene場景,新建全局變數-&gt;變數名”timer”,值”60”</p>
+<img src="img17.png" style="width:400px"></li>
+<li><p>添加動件-&gt;System-&gt;減法-&gt;全局變量選”timer”,值”1”-&gt;按確定</p>
+<img src="img18.png" style="width:400px"></li>
+<li><p>新建事件-&gt;System-&gt;比較全局變量-&gt;全局變量選”timer”,值”0”-&gt;按確定</p>
+<img src="img19.png" style="width:400px"></li>
+<li><p>添加動件-&gt;System-&gt;跳轉到指定場景-&gt;場景名”newScene1”</p>
+<img src="img20.png" style="width:400px"></li>
+<li><p>在MainScene場景,新建事件-&gt;System-&gt;場景初始化完成</p>
+<img src="img21.png" style="width:400px"></li>
+<li><p>添加動件-&gt;文本”score”-&gt;文本內容-&gt;設置文本內容:”得分”+System.score</p>
+<img src="img22.png" style="width:400px"></li>
+<li><p>新建事件-&gt;精靈”重設按鈕”-&gt;當按下時</p>
+<img src="img23.png" style="width:400px"></li>
+<li><p>添加動件-&gt;System-&gt;跳轉到指定場景-&gt;場景名”MainScene”</p>
+<img src="img24.png" style="width:400px"></li>
+<li><p>添加動件-&gt;System-&gt;全局變量”設置值”-&gt;全局變量”timer”,值”60”</p>
+<img src="img25.png" style="width:400px"></li>
+<li><p>添加動件-&gt;System-&gt;全局變量”設置值”-&gt;全局變量”score”,值”0”</p>
+<img src="img26.png" style="width:400px"></li>
+<li><p>按”預覽運行”,完成遊戲。</p>
+<img src="img27.png" style="width:400px"></li>
+</ol>
 
     </div>
 </div>

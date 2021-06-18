@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://kame2lam.github.io/2021/06/01/LakeshoreGame2/</loc>
+    
+    <lastmod>2021-06-18</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://kame2lam.github.io/2021/06/01/LakeshoreGame1/</loc>
     
     <lastmod>2021-06-11</lastmod>
@@ -19,13 +26,6 @@
     <loc>https://kame2lam.github.io/2021/06/03/LakeshoreGame3/</loc>
     
     <lastmod>2021-06-09</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://kame2lam.github.io/2021/06/01/LakeshoreGame2/</loc>
-    
-    <lastmod>2021-06-03</lastmod>
     
   </url>
   
@@ -60,7 +60,7 @@
 
   <url>
     <loc>https://kame2lam.github.io/</loc>
-    <lastmod>2021-06-11</lastmod>
+    <lastmod>2021-06-18</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
@@ -68,21 +68,21 @@
   
   <url>
     <loc>https://kame2lam.github.io/tags/Lakeshore/</loc>
-    <lastmod>2021-06-11</lastmod>
+    <lastmod>2021-06-18</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://kame2lam.github.io/tags/javascropt/</loc>
-    <lastmod>2021-06-11</lastmod>
+    <lastmod>2021-06-18</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://kame2lam.github.io/tags/microPython/</loc>
-    <lastmod>2021-06-11</lastmod>
+    <lastmod>2021-06-18</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
@@ -91,14 +91,14 @@
   
   <url>
     <loc>https://kame2lam.github.io/categories/Lakeshore/</loc>
-    <lastmod>2021-06-11</lastmod>
+    <lastmod>2021-06-18</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://kame2lam.github.io/categories/microPython/</loc>
-    <lastmod>2021-06-11</lastmod>
+    <lastmod>2021-06-18</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
