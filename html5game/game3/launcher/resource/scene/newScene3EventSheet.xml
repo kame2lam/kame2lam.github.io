@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<eventSheets layout="newScene3" previous="" next="" version="2.2">
+  <item type="instance" UID="58"/>
+  <item type="variable" variableName="level" variableType="number" initValue="0"/>
+  <item type="variable" variableName="pinNum" variableType="number" initValue="5"/>
+  <item type="event" conditionRelationShip="true" triggerOnceWhileTrue="false">
+    <item type="condition" callTarget="instance" paramsClass="OnSceneInitCompleteEvent" callName="onSceneInitComplete" isTrigger="true" target="System"/>
+    <item type="action" persistent="false" callTarget="instance" callName="wait" target="System">
+      <item valueDataType="number" value="3" name="time"/>
+    </item>
+    <item type="action" persistent="false" callTarget="instance" callName="gotoScene" target="System">
+      <item valueDataType="string" value="%22newScene1%22" name="18"/>
+    </item>
+  </item>
+</eventSheets>

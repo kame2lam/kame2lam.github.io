@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<eventSheets layout="newScene1" previous="" next="" version="2.2">
+  <item type="instance" UID="65"/>
+  <item type="instance" UID="62"/>
+  <item type="instance" UID="25"/>
+  <item type="instance" UID="48"/>
+  <item type="variable" variableName="level" variableType="number" initValue="0"/>
+  <item type="variable" variableName="pinNum" variableType="number" initValue="5"/>
+  <item type="event" conditionRelationShip="true" triggerOnceWhileTrue="false">
+    <item type="condition" callTarget="instance" paramsClass="OnSceneInitCompleteEvent" callName="onSceneInitComplete" isTrigger="true" target="System"/>
+    <item type="action" persistent="false" callTarget="instance" callName="setText" target="level">
+      <item valueDataType="string" value="%22%E9%97%9C%E5%8D%A1%3A%22%2BSystem.level" name="1"/>
+    </item>
+  </item>
+  <item type="event" conditionRelationShip="true" triggerOnceWhileTrue="false">
+    <item type="condition" callTarget="instance" paramsClass="OnButtonBeginEvent" callName="onButtonBegin" isTrigger="true" target="startBtn"/>
+    <item type="action" persistent="false" callTarget="instance" callName="gotoScene" target="System">
+      <item valueDataType="string" value="%22MainScene%22" name="18"/>
+    </item>
+    <item type="action" persistent="false" callTarget="instance" callName="setValue" target="System">
+      <item valueDataType="string" value="pinNum" name="10" variable="true"/>
+      <item valueDataType="any" value="5%2BSystem.level*2" name="9"/>
+    </item>
+  </item>
+  <item type="event" conditionRelationShip="true" triggerOnceWhileTrue="false">
+    <item type="condition" callTarget="instance" paramsClass="OnButtonBeginEvent" callName="onButtonBegin" isTrigger="true" target="resetBtn"/>
+    <item type="action" persistent="false" callTarget="instance" callName="setValue" target="System">
+      <item valueDataType="string" value="level" name="10" variable="true"/>
+      <item valueDataType="any" value="0" name="9"/>
+    </item>
+    <item type="action" persistent="false" callTarget="instance" callName="setText" target="level">
+      <item valueDataType="string" value="%22%E9%97%9C%E5%8D%A1%3A%22%2BSystem.level" name="1"/>
+    </item>
+  </item>
+</eventSheets>

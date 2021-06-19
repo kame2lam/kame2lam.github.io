@@ -1,80 +1,81 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <eventSheets layout="MainScene" previous="" next="" version="2.2">
-  <item type="instance" UID="593"/>
-  <item type="instance" UID="24"/>
-  <item type="instance" UID="18"/>
-  <item type="instance" UID="16"/>
-  <item type="instance" UID="11">
+  <item type="instance" UID="59">
     <item type="behavior" behaviorType="PinBehavior" name="别针"/>
   </item>
-  <item type="instance" UID="13"/>
-  <item type="instance" UID="8">
+  <item type="instance" UID="53"/>
+  <item type="instance" UID="45"/>
+  <item type="instance" UID="19"/>
+  <item type="instance" UID="16"/>
+  <item type="instance" UID="9">
+    <item type="behavior" behaviorType="PinBehavior" name="别针"/>
+  </item>
+  <item type="instance" UID="2">
     <item type="behavior" behaviorType="RotateBehaivor" name="旋转">
-      <item valueDataType="number" value="150" name="speed"/>
+      <item valueDataType="number" value="100" name="speed"/>
       <item valueDataType="number" value="0" name="acceleration"/>
     </item>
   </item>
-  <item type="variable" variableName="score" variableType="number" initValue="0"/>
-  <item type="variable" variableName="gameOver" variableType="boolean" initValue="false"/>
+  <item type="variable" variableName="level" variableType="number" initValue="0"/>
+  <item type="variable" variableName="pinNum" variableType="number" initValue="5"/>
   <item type="event" conditionRelationShip="true" triggerOnceWhileTrue="false">
-    <item type="condition" callTarget="instance" paramsClass="OnTouchTapEvent" callName="onTouchTap" isTrigger="true" target="Touch"/>
-    <item type="condition" callTarget="instance" paramsClass="CompareVariableEvent" callName="compareVariable" isTrigger="false" target="System">
-      <item valueDataType="string" value="gameOver" name="variable" variable="true"/>
-      <item valueDataType="string" value="%22equalTo%22" name="operationType"/>
-      <item valueDataType="any" value="false" name="value"/>
+    <item type="condition" callTarget="instance" paramsClass="OnSceneInitCompleteEvent" callName="onSceneInitComplete" isTrigger="true" target="System"/>
+    <item type="action" persistent="false" callTarget="instance" callName="setText" target="pinNum">
+      <item valueDataType="string" value="System.pinNum" name="1"/>
     </item>
-    <item type="action" persistent="false" callTarget="instance" callName="spawn" target="stopCirle">
-      <item valueDataType="string" value="pen" name="10" isFamily="false"/>
-      <item valueDataType="number" value="0" name="11"/>
-      <item valueDataType="number" value="0" name="12"/>
-      <item valueDataType="number" value="100" name="13"/>
-      <item valueDataType="number" value="1" name="14"/>
-    </item>
-    <item type="action" persistent="false" callTarget="instance" callName="addTo" target="System">
-      <item valueDataType="string" value="score" name="14" variable="true"/>
-      <item valueDataType="number" value="1" name="13"/>
-    </item>
-    <item type="action" persistent="false" callTarget="instance" callName="setText" target="AITextField15">
-      <item valueDataType="string" value="%22%E5%BE%97%E5%88%86%3A%22%2BSystem.score" name="1"/>
+    <item type="action" persistent="false" callTarget="instance" callName="setText" target="AITextField44">
+      <item valueDataType="string" value="%22%E9%97%9C%E5%8D%A1%3A%22%2BSystem.level" name="1"/>
     </item>
   </item>
   <item type="event" conditionRelationShip="true" triggerOnceWhileTrue="false">
     <item type="condition" callTarget="instance" paramsClass="EveryTickEvent" callName="everyTick" isTrigger="false" target="System"/>
-    <item type="action" persistent="false" callTarget="instance" callName="pin" target="pen" behaviorName="别针">
-      <item valueDataType="string" value="AISprite7" name="1" isFamily="false"/>
+    <item type="action" persistent="false" callTarget="instance" callName="pin" target="movePin" behaviorName="别针">
+      <item valueDataType="string" value="moveCircle" name="1" isFamily="false"/>
       <item valueDataType="number" value="0" name="2"/>
     </item>
   </item>
   <item type="event" conditionRelationShip="true" triggerOnceWhileTrue="false">
-    <item type="condition" callTarget="instance" paramsClass="OnCollisionWithOtherObjectEvent" callName="onCollisionWithOtherObject" isTrigger="true" target="pen">
-      <item valueDataType="string" value="pen" name="object" isFamily="false"/>
+    <item type="condition" callTarget="instance" paramsClass="OnTouchTapEvent" callName="onTouchTap" isTrigger="true" target="Touch"/>
+    <item type="condition" callTarget="instance" paramsClass="CompareVariableEvent" callName="compareVariable" isTrigger="false" target="System">
+      <item valueDataType="string" value="pinNum" name="variable" variable="true"/>
+      <item valueDataType="string" value="%22greaterThan%22" name="operationType"/>
+      <item valueDataType="any" value="0" name="value"/>
     </item>
-    <item type="action" persistent="false" callTarget="instance" callName="setSpeed" target="AISprite7" behaviorName="旋转">
-      <item valueDataType="number" value="0" name="1"/>
+    <item type="action" persistent="false" callTarget="instance" callName="spawn" target="stopCircle">
+      <item valueDataType="string" value="movePin" name="10" isFamily="false"/>
+      <item valueDataType="number" value="0" name="11"/>
+      <item valueDataType="number" value="0" name="12"/>
+      <item valueDataType="number" value="50" name="13"/>
+      <item valueDataType="number" value="1" name="14"/>
     </item>
-    <item type="action" persistent="false" callTarget="instance" callName="setBoolean" target="System">
-      <item valueDataType="string" value="gameOver" name="8" variable="true"/>
-      <item valueDataType="number" value="1" name="7"/>
+    <item type="action" persistent="false" callTarget="instance" callName="subtractFrom" target="System">
+      <item valueDataType="string" value="pinNum" name="12" variable="true"/>
+      <item valueDataType="number" value="1" name="11"/>
     </item>
-    <item type="action" persistent="false" callTarget="instance" callName="setVisible" target="AISprite592">
-      <item valueDataType="number" value="1" name="10"/>
-    </item>
-    <item type="action" persistent="false" callTarget="instance" callName="setVisible" target="gameOver">
-      <item valueDataType="number" value="1" name="10"/>
+    <item type="action" persistent="false" callTarget="instance" callName="setText" target="pinNum">
+      <item valueDataType="string" value="System.pinNum" name="1"/>
     </item>
   </item>
   <item type="event" conditionRelationShip="true" triggerOnceWhileTrue="false">
-    <item type="condition" callTarget="instance" paramsClass="OnButtonBeginEvent" callName="onButtonBegin" isTrigger="true" target="AISprite592"/>
+    <item type="condition" callTarget="instance" paramsClass="CompareVariableEvent" callName="compareVariable" isTrigger="false" target="System">
+      <item valueDataType="string" value="pinNum" name="variable" variable="true"/>
+      <item valueDataType="string" value="%22equalTo%22" name="operationType"/>
+      <item valueDataType="any" value="0" name="value"/>
+    </item>
+    <item type="action" persistent="false" callTarget="instance" callName="addTo" target="System">
+      <item valueDataType="string" value="level" name="14" variable="true"/>
+      <item valueDataType="number" value="1" name="13"/>
+    </item>
     <item type="action" persistent="false" callTarget="instance" callName="gotoScene" target="System">
-      <item valueDataType="string" value="%22MainScene%22" name="18"/>
+      <item valueDataType="string" value="%22newScene2%22" name="18"/>
     </item>
-    <item type="action" persistent="false" callTarget="instance" callName="setBoolean" target="System">
-      <item valueDataType="string" value="gameOver" name="8" variable="true"/>
-      <item valueDataType="number" value="0" name="7"/>
+  </item>
+  <item type="event" conditionRelationShip="true" triggerOnceWhileTrue="false">
+    <item type="condition" callTarget="instance" paramsClass="OnCollisionWithOtherObjectEvent" callName="onCollisionWithOtherObject" isTrigger="true" target="movePin">
+      <item valueDataType="string" value="movePin" name="object" isFamily="false"/>
     </item>
-    <item type="action" persistent="false" callTarget="instance" callName="setValue" target="System">
-      <item valueDataType="string" value="score" name="10" variable="true"/>
-      <item valueDataType="any" value="0" name="9"/>
+    <item type="action" persistent="false" callTarget="instance" callName="gotoScene" target="System">
+      <item valueDataType="string" value="%22newScene3%22" name="18"/>
     </item>
   </item>
 </eventSheets>
