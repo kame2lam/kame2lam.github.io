@@ -9,14 +9,14 @@
       
       
       
-        <link rel="canonical" href="https://kame2lam.github.io/pygameZeroGame1/">
+        <link rel="canonical" href="https://kame2lam.github.io/pygameZero3/">
       
       <link rel="icon" href="../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.2.1, mkdocs-material-7.1.8">
     
     
       
-        <title>Pygame Zero:Game1 射擊遊戲 - Kame Lam Note</title>
+        <title>pygameZero 3 見縫插針 - Kame Lam Note</title>
       
     
     
@@ -88,7 +88,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Pygame Zero:Game1 射擊遊戲
+              pygameZero 3 見縫插針
             
           </span>
         </div>
@@ -204,8 +204,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../LakeshoreGame1/" class="md-nav__link">
-        Lakeshore:Game1 打磚
+      <a href="../Lakeshore1/" class="md-nav__link">
+        Lakeshore 1 打磚遊戲
       </a>
     </li>
   
@@ -216,8 +216,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../LakeshoreGame2/" class="md-nav__link">
-        Lakeshore:Game2 切西瓜
+      <a href="../Lakeshore2/" class="md-nav__link">
+        Lakeshore 2 切西瓜遊戲
       </a>
     </li>
   
@@ -228,8 +228,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../LakeshoreGame3/" class="md-nav__link">
-        Lakeshore:Game3 見鏠插針
+      <a href="../Lakeshore3/" class="md-nav__link">
+        Lakeshore 3 見鏠插針遊戲
       </a>
     </li>
   
@@ -270,6 +270,30 @@
             
   
   
+  
+    <li class="md-nav__item">
+      <a href="../pygameZero1/" class="md-nav__link">
+        Pygame Zero 1 射擊遊戲
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../pygameZero2/" class="md-nav__link">
+        pygameZero2
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
     
   
   
@@ -280,9 +304,45 @@
       
       
       <a href="./" class="md-nav__link md-nav__link--active">
-        Pygame Zero:Game1 射擊遊戲
+        pygameZero 3 見縫插針
       </a>
       
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../pygameZero4/" class="md-nav__link">
+        pygameZero 4 飛機大戰
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../pygameZero5/" class="md-nav__link">
+        pygameZero 5 齊齊下樓梯
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../pygameZero6/" class="md-nav__link">
+        pygameZero 6 貪食蛇
+      </a>
     </li>
   
 
@@ -306,119 +366,119 @@
               
                 
                 
-                  <h1>Pygame Zero:Game1 射擊遊戲</h1>
+                  <h1>pygameZero 3 見縫插針</h1>
                 
-                <p>*程式1</p>
-<pre><code class="language-python">import pgzrun
-
-WIDTH = 500 #視窗闊度
-HEIGHT = 500 #視窗高度
-
-#加入角色
-alien = Actor('alien',(100,60))
+                <ul>
+<li>文件架</li>
+</ul>
+<pre><code>├── images/
+│   └── needle.png
+└── intro.py
+</code></pre>
+<ul>
+<li>程式架構</li>
+</ul>
+<pre><code class="language-python">
 def draw():
-    screen.clear()
-    alien.draw()
+  pass
 
-pgzrun.go()
+def update():
+  pass
+
+def on_key_down():
+  pass
 </code></pre>
-<p>*程式2</p>
-<pre><code class="language-python">import pgzrun 
-import random
+<ul>
+<li>第一步, 把針和圓形畫入畫布</li>
+</ul>
+<pre><code class="language-python">startNeedle= Actor('needle', anchor=(170+50, 1.5))
+startNeedle.x =200
+startNeedle.y = 300
 
-WIDTH = 500 #視窗闊度
-HEIGHT = 500 #視窗高度
-timer = 60 #角色出現的時間
-
-pgbd2 = Actor('pagebg2')
-alien = Actor('alien',(100,60))
-
-score=0 #得分
-
-def draw(): #畫面作圖
-    screen.clear()
-    pgbd2.draw()
-    alien.draw()
-    screen.draw.text(str(score),(30,30),fontsize=50,color='green')
-
-def update(): #畫面更新
-    global timer #載入共公變量
-    timer -= 1
-    if timer &lt;0:
-        alien.x = random.randint(10,500)
-        alien.y = random.randint(10,500)
-        timer = 60
-
-def on_mouse_down(pos): 
-    global score, timer #載入共公變量
-    if alien.collidepoint(pos):
-        sounds.eep.play()
-        alien.x = random.randint(10,500)
-        alien.y = random.randint(10,500)
-        timer = 60
-        score = score + 1
-
-pgzrun.go()
+def draw():
+  global rotateSpeed
+  screen.fill('white')
+  startNeedle.draw()
+  # 畫紅色實心圓
+  screen.draw.filled_circle((400,300) , 80 , 'red')
 </code></pre>
-<p>*程式3(完整代碼)</p>
-<pre><code class="language-python">import pgzrun 
-import random
+<ul>
+<li>第二步, 使針旋轉</li>
+</ul>
+<pre><code class="language-python">startNeedle= Actor('needle', anchor=(170+50, 1.5))
+startNeedle.x =400
+startNeedle.y = 300
 
-WIDTH = 500 #視窗闊度
-HEIGHT = 500 #視窗高度
-timer = 60 #角色出現的時間
-timer2 = 5000 #遊戲一局的時間
-page=1 #頁面數
+def update():
+  global rotateSpeed
+  startNeedle.angle += rotateSpeed
+</code></pre>
+<ul>
+<li>第三步, 增加針</li>
+</ul>
+<pre><code class="language-python">startNeedle= Actor('needle', anchor=(170+50, 1.5))
+startNeedle.x =200
+startNeedle.y = 300
+needles = []
+rotateSpeed = 1
 
-pgbd1 = Actor('pagebg1')
-pgbd2 = Actor('pagebg2')
-btn1 = Actor('btn1',(250,300))
-btn2 = Actor('btn2',(250,400))
-alien = Actor('alien',(100,60))
+def draw():
+  global rotateSpeed
+  screen.fill('white')
+  startNeedle.draw()
+  for needle in needles:
+    needle.draw()
+  screen.draw.filled_circle((400,300) , 80 , 'red')
+  screen.draw.text(str(score) , (50,250) , fontsize=50 , color='green')
 
-score=0 #得分
+def update():
+  global rotateSpeed
+  for needle in needles:
+    needle.angle += rotateSpeed
 
-def draw(): #畫面作圖
-    global timer2,page #載入共公變量
-    screen.clear()
-    if page == 1: #開始頁面
-        pgbd1.draw()
-        btn1.draw()
-    if page == 2: #遊戲頁面
-        pgbd2.draw()
-        alien.draw()
-        screen.draw.text(str(score),(30,30),fontsize=50,color='green')
-        if timer2 &lt; 0:
-            btn2.draw()
+def on_key_down():
+  newNeedle=Actor('needle' ,anchor=(170+50, 1.5))
+  newNeedle.x=400
+  newNeedle.y=300
+  needles.append(newNeedle)
+</code></pre>
+<ul>
+<li>第四步, 判斷勝負</li>
+</ul>
+<pre><code class="language-python">startNeedle= Actor('needle', anchor=(170+50, 1.5))
+startNeedle.x =200
+startNeedle.y = 300
+needles = []
+rotateSpeed = 1
+score = 0
 
+def draw():
+  global rotateSpeed
+  screen.fill('white')
+  startNeedle.draw()
+  for needle in needles:
+    needle.draw()
+  screen.draw.filled_circle((400,300) , 80 , 'red')
+  screen.draw.text(str(score) , (50,250) , fontsize=50 , color='green')
+  if rotateSpeed == 0:
+    screen.draw.text('Game Over!' , (1,320) , fontsize=35 , color='red')
 
-def update(): #畫面更新
-    global timer,timer2,page #載入共公變量
-    timer -= 1
-    timer2 -= 1
-    if timer2 &lt; 0:
-        return
-    if timer &lt;0:
-        alien.x = random.randint(10,500)
-        alien.y = random.randint(10,500)
-        timer = 60
+def update():
+  global rotateSpeed
+  for needle in needles:
+    needle.angle += rotateSpeed
 
-def on_mouse_down(pos): 
-    global score, timer,timer2,page #載入共公變量
-    if btn1.collidepoint(pos):
-        page=2
-    if alien.collidepoint(pos) and timer2&gt;0:
-        sounds.eep.play()
-        alien.x = random.randint(10,500)
-        alien.y = random.randint(10,500)
-        timer = 60
-        score = score + 1
-    if btn2.collidepoint(pos) and timer2&lt;0:
-        page = 1
-        score = 0
-        timer2 = 5000
-
-pgzrun.go()
+def on_key_down():
+  global rotateSpeed, score
+  newNeedle=Actor('needle' ,anchor=(170+50, 1.5))
+  newNeedle.x=400
+  newNeedle.y=300
+  for needle in needles:
+    if newNeedle.colliderect(needle):
+      rotateSpeed = 0
+  if rotateSpeed &gt; 0:
+    score += 1
+  needles.append(newNeedle)
 </code></pre>
                 
                   
@@ -441,7 +501,7 @@ pgzrun.go()
     <nav class="md-footer__inner md-grid" aria-label="Footer">
       
         
-        <a href="../LakeshoreGame3/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Lakeshore:Game3 見鏠插針" rel="prev">
+        <a href="../pygameZero2/" class="md-footer__link md-footer__link--prev" aria-label="Previous: pygameZero2" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
           </div>
@@ -450,11 +510,26 @@ pgzrun.go()
               <span class="md-footer__direction">
                 Previous
               </span>
-              Lakeshore:Game3 見鏠插針
+              pygameZero2
             </div>
           </div>
         </a>
       
+      
+        
+        <a href="../pygameZero4/" class="md-footer__link md-footer__link--next" aria-label="Next: pygameZero 4 飛機大戰" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              pygameZero 4 飛機大戰
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+          </div>
+        </a>
       
     </nav>
   
