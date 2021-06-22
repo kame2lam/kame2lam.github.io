@@ -367,11 +367,53 @@
         <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" >
       
       <label class="md-nav__link" for="__nav_4">
+        軟體推薦
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="軟體推薦" data-md-level="1">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          軟體推薦
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../software1/" class="md-nav__link">
+        格式工廠 FormatFactory - 最受歡迎影片轉檔工具
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" >
+      
+      <label class="md-nav__link" for="__nav_5">
         餘暇活動
         <span class="md-nav__icon md-icon"></span>
       </label>
       <nav class="md-nav" aria-label="餘暇活動" data-md-level="1">
-        <label class="md-nav__title" for="__nav_4">
+        <label class="md-nav__title" for="__nav_5">
           <span class="md-nav__icon md-icon"></span>
           餘暇活動
         </label>
@@ -410,11 +452,30 @@
                 
                   <h1>Lakeshore 3 見鏠插針遊戲</h1>
                 
-                <p><strong>縮圖:</strong>
-<img src="/Lakeshore3/img0.png" style="width:200px;" /></p>
+                <p><strong>縮圖:</strong></p>
+<p><img src="/Lakeshore3/img0.png" style="width:200px;" /></p>
 <p><a href="https://kame2lam.github.io/public/html5game/game3/launcher/">成品</a></p>
-<p><strong>教程:</strong>
-<a href="https://raw.githubusercontent.com/kame2lam/kame2lam.github.io/master/public/html5game/game3/%E8%A6%8B%E9%8F%A0%E6%8F%92%E9%87%9D.pptx">素材載點</a></p>
+<p><strong>教程:</strong></p>
+<p><a href="https://raw.githubusercontent.com/kame2lam/kame2lam.github.io/master/public/html5game/game3/%E8%A6%8B%E9%8F%A0%E6%8F%92%E9%87%9D.pptx">素材載點</a></p>
+<p>1- 在場景"newScene1", 插入圖片, 和輸入文字。</p>
+<p><img src="/Lakeshore3/img1.png" style="width:400px" /></p>
+<p>2- 新增場景 MainScene, newScene2, newScene3。</p>
+<p><img src="/Lakeshore3/img2.png" style="width:200px" /></p>
+<p>3- 在場景"newScene1"事件表, 插入全局變量 level, pinNum。</p>
+<p><img src="/Lakeshore3/img3.png" style="width:400px" /></p>
+<p>4- 在事件表內，新建事件-&gt;添加條件-&gt;System-&gt;場景初始化完成;</p>
+<p>添加動件-&gt;文本-&gt;文本內容-&gt;設置文本內容,"關卡:"+System.level-&gt; 按確定;</p>
+<p>添加動件-&gt;System-&gt;設置值-&gt;pinNum= 5+System.level*2 -&gt; 按確定。</p>
+<p><img src="/Lakeshore3/img4.png" style="width:400px" /></p>
+<p>5- 在事件表內，新建事件-&gt;添加條件-&gt;精靈startBtn-&gt;當按下時;</p>
+<p>添加動件-&gt;System-&gt; 跳轉到指定場景-&gt; 場景名:MainScene。</p>
+<p><img src="/Lakeshore3/img5.png" style="width:400px" /></p>
+<p>6- 在事件表內，新建事件-&gt;添加條件-&gt;精靈resetBtn-&gt;當按下時;</p>
+<p>添加動件-&gt;System-&gt;設置值-&gt;level=0 ;</p>
+<p>添加動件-&gt;文本-&gt;文本內容-&gt;設置文本內容,"關卡:"+System.level 。</p>
+<p><img src="/Lakeshore3/img6.png" style="width:400px" /></p>
+<p>7- 在場景"MainScene", 插入圖片, 和輸入文字。</p>
+<p><img src="/Lakeshore3/img7.png" style="width:200px"/></p>
                 
                   
                 
