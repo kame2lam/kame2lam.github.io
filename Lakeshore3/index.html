@@ -488,18 +488,59 @@
 <p>3- 在場景"newScene1"事件表, 插入全局變量 level, pinNum。</p>
 <p><img src="/Lakeshore3/img3.png" style="width:400px" /></p>
 <p>4- 在事件表內，新建事件-&gt;添加條件-&gt;System-&gt;場景初始化完成;</p>
-<p>添加動件-&gt;文本-&gt;文本內容-&gt;設置文本內容,"關卡:"+System.level-&gt; 按確定;</p>
-<p>添加動件-&gt;System-&gt;設置值-&gt;pinNum= 5+System.level*2 -&gt; 按確定。</p>
+<p>添加動作-&gt;文本-&gt;文本內容-&gt;設置文本內容,"關卡:"+System.level-&gt; 按確定;</p>
+<p>添加動作-&gt;System-&gt;設置值-&gt;pinNum= 5+System.level*2 -&gt; 按確定。</p>
 <p><img src="/Lakeshore3/img4.png" style="width:400px" /></p>
 <p>5- 在事件表內，新建事件-&gt;添加條件-&gt;精靈startBtn-&gt;當按下時;</p>
-<p>添加動件-&gt;System-&gt; 跳轉到指定場景-&gt; 場景名:MainScene。</p>
+<p>添加動作-&gt;System-&gt; 跳轉到指定場景-&gt; 場景名:MainScene。</p>
 <p><img src="/Lakeshore3/img5.png" style="width:400px" /></p>
 <p>6- 在事件表內，新建事件-&gt;添加條件-&gt;精靈resetBtn-&gt;當按下時;</p>
-<p>添加動件-&gt;System-&gt;設置值-&gt;level=0 ;</p>
-<p>添加動件-&gt;文本-&gt;文本內容-&gt;設置文本內容,"關卡:"+System.level 。</p>
+<p>添加動作-&gt;System-&gt;設置值-&gt;level=0 ;</p>
+<p>添加動作-&gt;文本-&gt;文本內容-&gt;設置文本內容,"關卡:"+System.level 。</p>
 <p><img src="/Lakeshore3/img6.png" style="width:400px" /></p>
 <p>7- 在場景"MainScene", 插入圖片, 和輸入文字。</p>
-<p><img src="/Lakeshore3/img7.png" style="width:200px"/></p>
+<p><img src="/Lakeshore3/img7.png" style="width:400px"/></p>
+<p>8- 修改精靈"stopPin"的碰撞邊緣。</p>
+<p><img src="/Lakeshore3/img8.png" style="width:400px"/></p>
+<p>9- 在事件表內，新建事件-&gt;添加條件-&gt;System-&gt;場景初始化完成;</p>
+<p>添加動作-&gt;文本"level"-&gt;文本內容-&gt;設置文本內容,"關卡:"+System.level;</p>
+<p>添加動作-&gt;文本"pinNum"-&gt;文本內容-&gt;設置文本內容,System.pinNum。</p>
+<p><img src="/Lakeshore3/img9.png" style="width:400px"/></p>
+<p>10- 在事件表內，新建事件-&gt;添加條件-&gt;System-&gt;每帧觸發;</p>
+<p>添加動作-&gt;精靈"movePin"-&gt;固定到目標-&gt;目標對:moveCircle。</p>
+<p><img src="/Lakeshore3/img10.png" style="width:400px" /></p>
+<p>11- 在事件表內，新建事件-&gt;添加條件-&gt;Touch-&gt;輕觸屏幕時;</p>
+<p>添加條件-&gt;System-&gt;比較全局變量-&gt;pinNum大於0;</p>
+<p>添加動作-&gt;精靈"stopCircle"-&gt;制造-&gt;實例名:movePin, 垂直偏移:50;</p>
+<p>添加動作-&gt;system-&gt;減法-&gt;pinNum:1;</p>
+<p>添加動作-&gt;文本"pinNum"-&gt;文本內容-&gt;設置文本內容,System.pinNum。</p>
+<p><img src="/Lakeshore3/img11.png" style="width:400px"/></p>
+<p>12- 在事件表內, 添加條件-&gt;System-&gt;比較全局變量-&gt;pinNum等於0;</p>
+<p>添加動作-&gt;system-&gt;加法-&gt;level:1;</p>
+<p>添加動作-&gt;System-&gt; 跳轉到指定場景-&gt; 場景名:newScene2。</p>
+<p><img src="/Lakeshore3/img12.png" style="width:400px"/></p>
+<p>13- 在事件表內, 添加條件-&gt;精靈"movePin"-&gt;碰撞-&gt;實例名:movePin;</p>
+<p>添加動作-&gt;System-&gt; 跳轉到指定場景-&gt; 場景名:newScene3。</p>
+<p><img src="/Lakeshore3/img13.png" style="width:400px" /></p>
+<p>14- 按預覽運行查看結果。</p>
+<p><img src="/Lakeshore3/img14.png" style="width:400px"/></p>
+<p>15- 在場景"MainScene", 克隆(ctrl+D)精靈"movePin",並移到上方;</p>
+<p>複制(ctrl+C)精靈"movePin",改名稱為"stopPin"。</p>
+<p><img src="/Lakeshore3/img15.png" style="width:400px" /></p>
+<p>16- 在場景"newScene2", 插入文字"過關"。</p>
+<p><img src="/Lakeshore3/img16.png" style="width:200px" /></p>
+<p>17- 在場景"newScene2"事件表內,添加條件-&gt;System-&gt;場景初始化完成;</p>
+<p>添加動作-&gt;system-&gt;等待X秒-&gt;3秒;</p>
+<p>添加動作-&gt;System-&gt; 跳轉到指定場景-&gt; 場景名:newScene1。</p>
+<p><img src="/Lakeshore3/img17.png" style="width:400px" /></p>
+<p>18- 在場景"newScene3", 插入文字"失敗"</p>
+<p><img src="/Lakeshore3/img18.png" style="width:200px"/></p>
+<p>19- 在場景"newScene2"事件表內,添加條件-&gt;System-&gt;場景初始化完成;</p>
+<p>添加動作-&gt;system-&gt;等待X秒-&gt;3秒;</p>
+<p>添加動作-&gt;System-&gt; 跳轉到指定場景-&gt; 場景名:newScene1。</p>
+<p><img src="/Lakeshore3/img19.png" style="width:400px"/></p>
+<p>20- 按預覽運行, 完成遊戲。</p>
+<p><img src="/Lakeshore3/img19.png" style="width:400px" /></p>
                 
                   
                 
