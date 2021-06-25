@@ -9,14 +9,14 @@
       
       
       
-        <link rel="canonical" href="https://kame2lam.github.io/Lakeshore1/">
+        <link rel="canonical" href="https://kame2lam.github.io/excel1/">
       
       <link rel="icon" href="../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.2.1, mkdocs-material-7.1.8">
     
     
       
-        <title>Lakeshore 1 打磚遊戲 - Kame Lam Note</title>
+        <title>利用Excel進行T-test(T檢測) - Kame Lam Note</title>
       
     
     
@@ -88,7 +88,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Lakeshore 1 打磚遊戲
+              利用Excel進行T-test(T檢測)
             
           </span>
         </div>
@@ -181,14 +181,12 @@
 
   
   
-    
-  
   
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" >
       
       <label class="md-nav__link" for="__nav_2">
         Html5Game
@@ -204,19 +202,11 @@
             
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-      
-      
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../Lakeshore1/" class="md-nav__link">
         Lakeshore 1 打磚遊戲
       </a>
-      
     </li>
   
 
@@ -359,12 +349,14 @@
 
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" checked>
       
       <label class="md-nav__link" for="__nav_4">
         Excel教學
@@ -380,11 +372,19 @@
             
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../excel1/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         利用Excel進行T-test(T檢測)
       </a>
+      
     </li>
   
 
@@ -516,20 +516,32 @@
               
                 
                 
-                  <h1>Lakeshore 1 打磚遊戲</h1>
+                  <h1>利用Excel進行T-test(T檢測)</h1>
                 
-                <p><strong>縮圖</strong><br>
-<img src="/Lakeshore1/img1.png" style="width:200px;" /></p>
-<p><a href="https://kame2lam.github.io/public/html5game/game1/launcher/">成品</a></p>
-<p>Lakeshore是一款無需編程的免費遊戲創作工具
-官網︰https://docs.egret.com/lakeshore</p>
-<p><a href="https://www.mediafire.com/file/i0oq0mgenwrb2yc/Lakeshore-v2.1.3.zip/file">載點1</a>
-<a href="https://drive.google.com/file/d/1ETFgeb7NtndMr1l19b0nqR0_3NH2tN6Q/view?usp=sharing">載點2</a> 
-<a href="https://raw.githubusercontent.com/kame2lam/kame2lam.github.io/master/html5game/Lakeshore-v2.1.3.zip">載點3</a></p>
-<p><strong>教學</strong></p>
-<p><a href="https://raw.githubusercontent.com/kame2lam/kame2lam.github.io/master/public/html5game/game1/%E6%89%93%E7%A3%9A%E9%A0%AD.pptx">素材</a></p>
-<p><strong>教學視頻</strong>
-https://youtu.be/iTlYHTcKMyY</p>
+                <p>T檢驗常用於樣本含量較小（例如n&lt;30），總體標準差σ未知的正態分佈資料。它是用T分佈理論來推論差異發生的概率，從而比較兩個平均數的差異是否顯著。</p>
+<p><strong>工具︰</strong>  Excel</p>
+<p><strong>函數介紹</strong></p>
+<pre><code>函數語法如下，包含四個參數：
+T.TEST(array1,array2,tails,type)
+
+array1為樣本1的資料。
+array2為樣本2的資料。
+tails為單雙尾的設定，當：
+  tails = 1使用單尾分配。
+  tails = 2使用雙尾分配。
+type為不同t檢定的設定，當：
+  type = 1，樣本為成對樣本。
+  type = 2，樣本為獨立樣本，且具備變異數同質性。
+  type = 3，樣本為獨立樣本，且不具備變異數同質性。
+</code></pre>
+<p><strong>方法︰</strong>
+1- 打開excel輸入數據，如A組數據和B組數據進行比較。
+在空格中輸入 =T.TEST()；
+<img alt="img" src="img0.png" /></p>
+<p>2- Array1選擇A組數據，Array2選擇B組數據，trails和type輸入2;點擊"確定"，進行T-test分析。
+<img alt="img" src="img1.png" /></p>
+<p>3- 分析結果，若P&lt;0.05在存在顯著性差異，若P&lt;0.01則存在極顯著性差異。
+<img alt="img" src="img2.png" /></p>
                 
                   
                 
@@ -551,7 +563,7 @@ https://youtu.be/iTlYHTcKMyY</p>
     <nav class="md-footer__inner md-grid" aria-label="Footer">
       
         
-        <a href=".." class="md-footer__link md-footer__link--prev" aria-label="Previous: Home" rel="prev">
+        <a href="../pygameZero6/" class="md-footer__link md-footer__link--prev" aria-label="Previous: pygameZero 6 貪食蛇" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
           </div>
@@ -560,20 +572,20 @@ https://youtu.be/iTlYHTcKMyY</p>
               <span class="md-footer__direction">
                 Previous
               </span>
-              Home
+              pygameZero 6 貪食蛇
             </div>
           </div>
         </a>
       
       
         
-        <a href="../Lakeshore2/" class="md-footer__link md-footer__link--next" aria-label="Next: Lakeshore 2 切西瓜遊戲" rel="next">
+        <a href="../software1/" class="md-footer__link md-footer__link--next" aria-label="Next: 格式工廠 FormatFactory - 最受歡迎影片轉檔工具" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Next
               </span>
-              Lakeshore 2 切西瓜遊戲
+              格式工廠 FormatFactory - 最受歡迎影片轉檔工具
             </div>
           </div>
           <div class="md-footer__button md-icon">
