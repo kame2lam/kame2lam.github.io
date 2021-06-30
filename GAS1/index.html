@@ -5,10 +5,10 @@
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
-<link href="https://kame2lam.github.io/pygameZero2/" rel="canonical"/>
+<link href="https://kame2lam.github.io/GAS1/" rel="canonical"/>
 <link href="../assets/images/favicon.png" rel="icon"/>
 <meta content="mkdocs-1.2.1, mkdocs-material-7.1.8" name="generator"/>
-<title>Pygame Zero 2 飛翔的小鳥遊戲 - Kame Lam Note</title>
+<title>GAS1 - Kame Lam Note</title>
 <link href="../assets/stylesheets/main.ca7ac06f.min.css" rel="stylesheet"/>
 <link href="../assets/stylesheets/palette.f1a3b89f.min.css" rel="stylesheet"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
@@ -42,7 +42,7 @@
 <div class="md-header__topic" data-md-component="header-topic">
 <span class="md-ellipsis">
             
-              Pygame Zero 2 飛翔的小鳥遊戲
+              GAS1
             
           </span>
 </div>
@@ -99,8 +99,8 @@
 </ul>
 </nav>
 </li>
-<li class="md-nav__item md-nav__item--active md-nav__item--nested">
-<input checked="" class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" id="__nav_3" type="checkbox"/>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" id="__nav_3" type="checkbox"/>
 <label class="md-nav__link" for="__nav_3">
         pygameZero
         <span class="md-nav__icon md-icon"></span>
@@ -116,9 +116,8 @@
         Pygame Zero 1 射擊遊戲
       </a>
 </li>
-<li class="md-nav__item md-nav__item--active">
-<input class="md-nav__toggle md-toggle" data-md-toggle="toc" id="__toc" type="checkbox"/>
-<a class="md-nav__link md-nav__link--active" href="./">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../pygameZero2/">
         Pygame Zero 2 飛翔的小鳥遊戲
       </a>
 </li>
@@ -227,132 +226,44 @@
 </div>
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
-<h1>Pygame Zero 2 飛翔的小鳥遊戲</h1>
-<ul>
-<li>文件架構</li>
-</ul>
-<pre><code>├── images/
-│   └── background.png
-│   └── bird1.png
-│   └── bottom.png
-│   └── top.png
-└── intro.py
+<h1>GAS1</h1>
+<p><strong>介紹：</strong>
+Google App Script (GAS)
+Google Apps Script 是一個可快速建置開發的後端服務，且可基於Google的服務平台上，簡單、快速地建置商業性服務，他可使用JavaScript語言去做開發建置，也可以透過Browser 直接在網頁是上在Google服務端上開發，亦可以套用Google App，像是Gmail, Calendar, Google Drive...等等，且不用特別安裝，因為這都是Google 所提供的服務。</p>
+<p><strong>建立環境：</strong>
+1- GAS 的 Cheerio 模組</p>
+<p>先在 Google Drive 新增一個 GAS 專案，然後點選單上的"資源庫"-&gt;"新增程式庫"</p>
+<p>指令碼ID
+<code>MU756IKHJ2hAYP1glQmzgA4ZBvzIux02r</code></p>
+<p>2 -建立代碼</p>
+<pre><code class="language-javascript">function getHappyEvnet()
+{
+  //爬蟲
+  let URL="http://event.happymacao.com/cms62/e/action/ListInfo/?classid=87&amp;page=0";
+  options = {muteHttpExceptions: true,'method':'get'};
+  let eventAll=new Array();
+
+  let source = UrlFetchApp.fetch(URL, options);
+  let html=source.getContentText();
+  const $ = Cheerio.load(html,{ decodeEntities: false });
+  for (let i=0;i&lt;$('.eventinfo h2').length;i++){
+    eventAll.push([$('.eventinfo h2').eq(i).text(),
+      $('.eventinfo p').eq(i).text().replace('\n','').replace(/\s+/g,''),
+      $('.eventinfo li').eq(i).text(),
+      'http://event.happymacao.com'+$('.item a').eq(i).attr('href'),
+      'http://event.happymacao.com'+$('.item img').eq(i).attr('src')]);
+  }
+
+  console.log(eventAll);    
+}
 </code></pre>
-<ul>
-<li>程式架構</li>
-</ul>
-<pre><code class="language-python">
-def draw():
-  pass
-
-def update():
-  pass
-
-def on_mouse_down():
-  pass
-</code></pre>
-<ul>
-<li>第一步, 把角色、背景、障礙物畫入畫布</li>
-</ul>
-<pre><code class="language-python">WIDTH = 350
-HEIGHT = 600
-
-background=Actor('background')
-bird = Actor('bird1',(75,200))
-bar_up=Actor('top',(300,0))
-bar_down=Actor('bottom',(300,800))
-
-def draw():
-    screen.clear()
-    background.draw()
-    bar_up.draw()
-    bar_down.draw()
-    bird.draw()
-</code></pre>
-<ul>
-<li>第二步, 移動角色和障礙物</li>
-</ul>
-<pre><code class="language-python">rate = 2
-
-def update():
-    global rate
-    bird.y=bird.y + rate
-    bar_up.x=bar_up.x - rate
-    bar_down.x=bar_down.x - rate
-</code></pre>
-<ul>
-<li>第三步, 點擊滑鼠小鳥上升</li>
-</ul>
-<pre><code class="language-python">def on_mouse_down():
-    bird.y=bird.y-100
-</code></pre>
-<ul>
-<li>第四步, 判斷勝負</li>
-</ul>
-<pre><code class="language-python">score = 0
-
-def draw():
-    global score
-    screen.clear()
-    background.draw()
-    bar_up.draw()
-    bar_down.draw()
-    bird.draw()
-    screen.draw.text(str(score),(30,30),fontsize=50,color='green')
-
-def update():
-    global score,  rate
-    bird.y=bird.y + rate
-    bar_up.x=bar_up.x - rate
-    bar_down.x=bar_down.x - rate
-    if bar_up.x&lt;0:
-        bar_up.x=WIDTH
-        bar_down.x=WIDTH
-        bar_up.y=random.randint(-200,200)
-        bar_down.y=800+bar_up.y
-        score=score+1
-    # 判斷勝負
-    if bird.colliderect(bar_up) or bird.colliderect(bar_down) or bird.y&lt;0 or bird.y&gt;HEIGHT:
-        rate = 0
-
-def on_mouse_down():
-    global rate
-    if rate &gt; 0:
-        bird.y=bird.y-100
-</code></pre>
+<p><strong>Google使用限制</strong>
+<a href="https://developers.google.com/apps-script/guides/services/quotas">https://developers.google.com/apps-script/guides/services/quotas</a></p>
 </article>
 </div>
 </div>
 </main>
 <footer class="md-footer">
-<nav aria-label="Footer" class="md-footer__inner md-grid">
-<a aria-label="Previous: Pygame Zero 1 射擊遊戲" class="md-footer__link md-footer__link--prev" href="../pygameZero1/" rel="prev">
-<div class="md-footer__button md-icon">
-<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"></path></svg>
-</div>
-<div class="md-footer__title">
-<div class="md-ellipsis">
-<span class="md-footer__direction">
-                Previous
-              </span>
-              Pygame Zero 1 射擊遊戲
-            </div>
-</div>
-</a>
-<a aria-label="Next: pygameZero 3 見縫插針" class="md-footer__link md-footer__link--next" href="../pygameZero3/" rel="next">
-<div class="md-footer__title">
-<div class="md-ellipsis">
-<span class="md-footer__direction">
-                Next
-              </span>
-              pygameZero 3 見縫插針
-            </div>
-</div>
-<div class="md-footer__button md-icon">
-<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"></path></svg>
-</div>
-</a>
-</nav>
 <div class="md-footer-meta md-typeset">
 <div class="md-footer-meta__inner md-grid">
 <div class="md-footer-copyright">

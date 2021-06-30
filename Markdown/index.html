@@ -5,10 +5,10 @@
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
-<link href="https://kame2lam.github.io/pygameZero2/" rel="canonical"/>
+<link href="https://kame2lam.github.io/Markdown/" rel="canonical"/>
 <link href="../assets/images/favicon.png" rel="icon"/>
 <meta content="mkdocs-1.2.1, mkdocs-material-7.1.8" name="generator"/>
-<title>Pygame Zero 2 飛翔的小鳥遊戲 - Kame Lam Note</title>
+<title>Markdown 語法 - Kame Lam Note</title>
 <link href="../assets/stylesheets/main.ca7ac06f.min.css" rel="stylesheet"/>
 <link href="../assets/stylesheets/palette.f1a3b89f.min.css" rel="stylesheet"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
@@ -42,7 +42,7 @@
 <div class="md-header__topic" data-md-component="header-topic">
 <span class="md-ellipsis">
             
-              Pygame Zero 2 飛翔的小鳥遊戲
+              Markdown 語法
             
           </span>
 </div>
@@ -99,8 +99,8 @@
 </ul>
 </nav>
 </li>
-<li class="md-nav__item md-nav__item--active md-nav__item--nested">
-<input checked="" class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" id="__nav_3" type="checkbox"/>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" id="__nav_3" type="checkbox"/>
 <label class="md-nav__link" for="__nav_3">
         pygameZero
         <span class="md-nav__icon md-icon"></span>
@@ -116,9 +116,8 @@
         Pygame Zero 1 射擊遊戲
       </a>
 </li>
-<li class="md-nav__item md-nav__item--active">
-<input class="md-nav__toggle md-toggle" data-md-toggle="toc" id="__toc" type="checkbox"/>
-<a class="md-nav__link md-nav__link--active" href="./">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../pygameZero2/">
         Pygame Zero 2 飛翔的小鳥遊戲
       </a>
 </li>
@@ -195,8 +194,8 @@
 </ul>
 </nav>
 </li>
-<li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" id="__nav_6" type="checkbox"/>
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" id="__nav_6" type="checkbox"/>
 <label class="md-nav__link" for="__nav_6">
         其他文章
         <span class="md-nav__icon md-icon"></span>
@@ -207,8 +206,9 @@
           其他文章
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
-<li class="md-nav__item">
-<a class="md-nav__link" href="../Markdown/">
+<li class="md-nav__item md-nav__item--active">
+<input class="md-nav__toggle md-toggle" data-md-toggle="toc" id="__toc" type="checkbox"/>
+<a class="md-nav__link md-nav__link--active" href="./">
         Markdown 語法
       </a>
 </li>
@@ -227,98 +227,92 @@
 </div>
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
-<h1>Pygame Zero 2 飛翔的小鳥遊戲</h1>
-<ul>
-<li>文件架構</li>
-</ul>
-<pre><code>├── images/
-│   └── background.png
-│   └── bird1.png
-│   └── bottom.png
-│   └── top.png
-└── intro.py
+<h1>Markdown 語法</h1>
+<p>Markdown 是一種輕量級標記語言，通過簡單的標記語法，它可以讓文本內容具有一定的格式。MkDocs 的文件都是由 Markdown 語言編寫的，我們提供了一個基礎教程。</p>
+<p>因為這一個關於 MkDocs 的技術文檔， Markdown 語法並不是核心內容，所以這裏隻提供基礎語法的教學，幫助大家快速上手。如果想要學習更多 Markdown 標記語法，可以去 Markdown - 語法說明 學習；如果想要試試功能全麵、操作便捷的 Markdown 編輯器，MdEditor 是個不錯的選擇。建議打開 MdEditor，一邊操作一邊學習。</p>
+<p><strong>標題</strong></p>
+<p>語法</p>
+<pre><code># 一級標題
+## 二級標題
+### 三級標題
+#### 四級標題
+##### 五級標題
 </code></pre>
-<ul>
-<li>程式架構</li>
-</ul>
-<pre><code class="language-python">
-def draw():
-  pass
-
-def update():
-  pass
-
-def on_mouse_down():
-  pass
+<p><strong>字體</strong></p>
+<p>語法</p>
+<pre><code>*斜體文本*
+**粗體文本**
+***粗斜體***
 </code></pre>
-<ul>
-<li>第一步, 把角色、背景、障礙物畫入畫布</li>
-</ul>
-<pre><code class="language-python">WIDTH = 350
-HEIGHT = 600
-
-background=Actor('background')
-bird = Actor('bird1',(75,200))
-bar_up=Actor('top',(300,0))
-bar_down=Actor('bottom',(300,800))
-
-def draw():
-    screen.clear()
-    background.draw()
-    bar_up.draw()
-    bar_down.draw()
-    bird.draw()
+<p><strong>無序列表</strong></p>
+<p>語法</p>
+<pre><code>* 第一項
+* 第二項
+* 第三項
 </code></pre>
-<ul>
-<li>第二步, 移動角色和障礙物</li>
-</ul>
-<pre><code class="language-python">rate = 2
-
-def update():
-    global rate
-    bird.y=bird.y + rate
-    bar_up.x=bar_up.x - rate
-    bar_down.x=bar_down.x - rate
+<p><strong>有序列表</strong></p>
+<p>語法</p>
+<pre><code>1. 第一項
+2. 第二項
+3. 第三項
 </code></pre>
-<ul>
-<li>第三步, 點擊滑鼠小鳥上升</li>
-</ul>
-<pre><code class="language-python">def on_mouse_down():
-    bird.y=bird.y-100
+<p><strong>下劃線</strong></p>
+<p>語法</p>
+<pre><code>&lt;u&gt;帶下劃線的文本&lt;/u&gt;
 </code></pre>
-<ul>
-<li>第四步, 判斷勝負</li>
-</ul>
-<pre><code class="language-python">score = 0
-
-def draw():
-    global score
-    screen.clear()
-    background.draw()
-    bar_up.draw()
-    bar_down.draw()
-    bird.draw()
-    screen.draw.text(str(score),(30,30),fontsize=50,color='green')
-
-def update():
-    global score,  rate
-    bird.y=bird.y + rate
-    bar_up.x=bar_up.x - rate
-    bar_down.x=bar_down.x - rate
-    if bar_up.x&lt;0:
-        bar_up.x=WIDTH
-        bar_down.x=WIDTH
-        bar_up.y=random.randint(-200,200)
-        bar_down.y=800+bar_up.y
-        score=score+1
-    # 判斷勝負
-    if bird.colliderect(bar_up) or bird.colliderect(bar_down) or bird.y&lt;0 or bird.y&gt;HEIGHT:
-        rate = 0
-
-def on_mouse_down():
-    global rate
-    if rate &gt; 0:
-        bird.y=bird.y-100
+<p><strong>刪除線</strong></p>
+<p>語法</p>
+<pre><code>~~要刪除的文本~~
+</code></pre>
+<p><strong>代碼</strong></p>
+<p>語法</p>
+<pre><code>`代碼`
+</code></pre>
+<p><strong>引用</strong></p>
+<p>語法</p>
+<pre><code>&gt; 引用的文本
+</code></pre>
+<p><strong>鏈接</strong></p>
+<p>語法</p>
+<pre><code>[鏈接名稱](鏈接地址)
+&lt;鏈接地址&gt;
+</code></pre>
+<p><strong>圖片</strong></p>
+<p>語法</p>
+<pre><code>![圖片無法顯示時的替代文字](圖片地址)
+</code></pre>
+<p><strong>表格</strong></p>
+<p>語法</p>
+<pre><code>|  表頭   | 表頭  |
+|  ----- | ----  |
+| 單元格  | 單元格 |
+| 單元格  | 單元格 |
+| 單元格  | 單元格 |
+</code></pre>
+<p><strong>流程圖</strong></p>
+<p>語法</p>
+<pre><code>    ``` mermaid
+    graph TD;
+    A--&gt;B;
+    A--&gt;C; 
+    B--&gt;D;
+    C--&gt;D;
+    ```
+ This is additional text.
+</code></pre>
+<p>效果圖</p>
+<div class="mermaid">graph TD;
+ A--&gt;B;
+ A--&gt;C; 
+ B--&gt;D;
+ C--&gt;D;
+</div>
+<p>** mkdocs 安裝 mermaid插件</p>
+<pre><code>pip install mkdocs-mermaid2-plugin
+</code></pre>
+<p>在"mkdocs.yml"增加:</p>
+<pre><code>plugins:
+    - mermaid2
 </code></pre>
 </article>
 </div>
@@ -326,7 +320,7 @@ def on_mouse_down():
 </main>
 <footer class="md-footer">
 <nav aria-label="Footer" class="md-footer__inner md-grid">
-<a aria-label="Previous: Pygame Zero 1 射擊遊戲" class="md-footer__link md-footer__link--prev" href="../pygameZero1/" rel="prev">
+<a aria-label="Previous: 3D 建模軟件" class="md-footer__link md-footer__link--prev" href="../software3/" rel="prev">
 <div class="md-footer__button md-icon">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"></path></svg>
 </div>
@@ -335,17 +329,17 @@ def on_mouse_down():
 <span class="md-footer__direction">
                 Previous
               </span>
-              Pygame Zero 1 射擊遊戲
+              3D 建模軟件
             </div>
 </div>
 </a>
-<a aria-label="Next: pygameZero 3 見縫插針" class="md-footer__link md-footer__link--next" href="../pygameZero3/" rel="next">
+<a aria-label="Next: 餘暇活動" class="md-footer__link md-footer__link--next" href="../course1/" rel="next">
 <div class="md-footer__title">
 <div class="md-ellipsis">
 <span class="md-footer__direction">
                 Next
               </span>
-              pygameZero 3 見縫插針
+              餘暇活動
             </div>
 </div>
 <div class="md-footer__button md-icon">
@@ -371,5 +365,5 @@ def on_mouse_down():
 </div>
 <script id="__config" type="application/json">{"base": "..", "features": [], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../assets/javascripts/workers/search.b0710199.min.js", "version": null}</script>
 <script src="../assets/javascripts/bundle.76f349be.min.js"></script>
-</body>
+<script src="https://unpkg.com/mermaid@8.8.0/dist/mermaid.min.js"></script><script>mermaid.initialize({});</script></body>
 </html>

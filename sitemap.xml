@@ -2,82 +2,92 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://kame2lam.github.io/</loc>
-         <lastmod>2021-06-25</lastmod>
+         <lastmod>2021-06-30</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://kame2lam.github.io/GAS1/</loc>
+         <lastmod>2021-06-30</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://kame2lam.github.io/Lakeshore1/</loc>
-         <lastmod>2021-06-25</lastmod>
+         <lastmod>2021-06-30</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://kame2lam.github.io/Lakeshore2/</loc>
-         <lastmod>2021-06-25</lastmod>
+         <lastmod>2021-06-30</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://kame2lam.github.io/Lakeshore3/</loc>
-         <lastmod>2021-06-25</lastmod>
+         <lastmod>2021-06-30</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://kame2lam.github.io/Markdown/</loc>
+         <lastmod>2021-06-30</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://kame2lam.github.io/course1/</loc>
-         <lastmod>2021-06-25</lastmod>
+         <lastmod>2021-06-30</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://kame2lam.github.io/excel1/</loc>
-         <lastmod>2021-06-25</lastmod>
+         <lastmod>2021-06-30</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://kame2lam.github.io/otto/</loc>
-         <lastmod>2021-06-25</lastmod>
+         <lastmod>2021-06-30</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://kame2lam.github.io/pygameZero1/</loc>
-         <lastmod>2021-06-25</lastmod>
+         <lastmod>2021-06-30</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://kame2lam.github.io/pygameZero2/</loc>
-         <lastmod>2021-06-25</lastmod>
+         <lastmod>2021-06-30</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://kame2lam.github.io/pygameZero3/</loc>
-         <lastmod>2021-06-25</lastmod>
+         <lastmod>2021-06-30</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://kame2lam.github.io/pygameZero4/</loc>
-         <lastmod>2021-06-25</lastmod>
+         <lastmod>2021-06-30</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://kame2lam.github.io/pygameZero5/</loc>
-         <lastmod>2021-06-25</lastmod>
+         <lastmod>2021-06-30</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://kame2lam.github.io/pygameZero6/</loc>
-         <lastmod>2021-06-25</lastmod>
+         <lastmod>2021-06-30</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://kame2lam.github.io/software1/</loc>
-         <lastmod>2021-06-25</lastmod>
+         <lastmod>2021-06-30</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://kame2lam.github.io/software2/</loc>
-         <lastmod>2021-06-25</lastmod>
+         <lastmod>2021-06-30</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://kame2lam.github.io/software3/</loc>
-         <lastmod>2021-06-25</lastmod>
+         <lastmod>2021-06-30</lastmod>
          <changefreq>daily</changefreq>
     </url>
 </urlset>
